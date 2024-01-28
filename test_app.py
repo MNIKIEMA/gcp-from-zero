@@ -1,6 +1,5 @@
-from app import marco
+from app import hello
 
 
 def test_marco():
-    assert marco("Marco") == "Polo"
-    assert marco("Peter") == "Bob"
+    assert hello() == "Hello world"

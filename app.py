@@ -1,12 +1,14 @@
-#var=1
-#var=var
+from flask import Flask
 
+app = Flask(__name__)
 
-def marco(name):
-    if name == "Marco":
-        return "Polo"
-    return "Bob"
+@app.route("/")
+def hello():
+    """
+    Return hello world
+    """
+    return "Hello world"
 
 
 if __name__ == "__main__":
-    print(marco("Marco"))
+    app.run(host="127.0.0.1", port=8080, debug=True)
